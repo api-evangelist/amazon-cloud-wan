@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/json-structure/cloud-wan-get-core-network-response-structure.json",
+  "name": "GetCoreNetworkResponse",
+  "description": "Response for getting a core network.",
+  "type": "object",
+  "properties": {
+    "CoreNetwork": {
+      "$ref": "#/components/schemas/CoreNetwork"
+    }
+  }
+}

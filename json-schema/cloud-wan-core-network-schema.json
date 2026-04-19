@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/json-schema/cloud-wan-core-network-schema.json",
+  "title": "CoreNetwork",
+  "description": "Describes a core network.",
+  "type": "object",
+  "properties": {
+    "CoreNetworkId": {
+      "type": "string",
+      "description": "The ID of a core network.",
+      "example": "core-network-abc12345"
+    },
+    "CoreNetworkArn": {
+      "type": "string",
+      "description": "The ARN of a core network."
+    },
+    "GlobalNetworkId": {
+      "type": "string",
+      "description": "The ID of the global network where a core network is a part of."
+    },
+    "Description": {
+      "type": "string",
+      "description": "The description of a core network."
+    },
+    "State": {
+      "type": "string",
+      "enum": [
+        "CREATING",
+        "UPDATING",
+        "AVAILABLE",
+        "DELETING"
+      ],
+      "description": "The current state of a core network."
+    },
+    "CreatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp when a core network was created."
+    }
+  }
+}

@@ -1,16 +1,111 @@
 aid: amazon-cloud-wan
-name: Amazon Cloud Wan
+name: Amazon Cloud WAN
 description: >-
-  Amazon Cloud Wan provides API capabilities.
+  Amazon Cloud WAN is a managed wide area networking service that simplifies building, managing, and monitoring global WANs by connecting branch offices, data centers, and Amazon VPCs through a central
+  dashboard with network policy automation and unified monitoring.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags: []
+tags:
+- AWS
+- Cloud WAN
+- Networking
+- Wide Area Network
+- SD-WAN
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-03-16'
+modified: '2026-04-19'
 specificationVersion: '0.19'
-apis: []
+apis:
+- name: Amazon Cloud WAN API
+  description: API for building and managing global wide area networks, connecting branch offices, data centers, and VPCs with centralized control, monitoring, and network policy automation.
+  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+  humanURL: https://aws.amazon.com/cloud-wan/
+  baseURL: https://networkmanager.us-east-1.amazonaws.com
+  tags:
+  - AWS
+  - Cloud WAN
+  - Networking
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
+  - type: GettingStarted
+    url: https://aws.amazon.com/cloud-wan/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/cloud-wan/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/cloud-wan/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/networkmanager/
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+common:
+- type: Portal
+  url: https://aws.amazon.com/
+- type: Website
+  url: https://aws.amazon.com/cloud-wan/
+- type: Documentation
+  url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Blog
+  url: https://aws.amazon.com/blogs/networking-and-content-delivery/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/networkmanager/
+- type: SignUp
+  url: https://signin.aws.amazon.com/signup?request_type=register
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: YouTube
+  url: https://www.youtube.com/user/AmazonWebServices
+- type: StackOverflow
+  url: https://stackoverflow.com/questions/tagged/aws-cloud-wan
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: SpectralRules
+  url: rules/amazon-cloud-wan-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-cloud-wan-vocabulary.yaml
+- type: NaftikoCapability
+  url: capabilities/wan-management.yaml
+- type: Features
+  data:
+  - name: Centralized WAN Management
+    description: Build and manage global wide area networks through a single centralized dashboard.
+  - name: Network Policy Automation
+    description: Automate management and security tasks across your entire WAN infrastructure.
+  - name: Unified Monitoring
+    description: Monitor on-premises and AWS network health and performance from one view.
+  - name: Network Segmentation
+    description: Isolate sensitive traffic from standard data flows with segmentation policies.
+  - name: Global Connectivity
+    description: Connect branch offices, data centers, and VPCs with minimal configuration globally.
+- type: UseCases
+  data:
+  - name: Global Enterprise WAN
+    description: Build globally distributed corporate WANs using AWS infrastructure.
+  - name: Hybrid Network Extension
+    description: Extend on-premises corporate WANs into AWS cloud environments seamlessly.
+  - name: Network Centralization
+    description: Centralize network configuration, monitoring, and automation across all locations.
+- type: Integrations
+  data:
+  - name: AWS Transit Gateway
+    description: Connect VPCs and on-premises networks through Transit Gateway attachments.
+  - name: AWS Direct Connect
+    description: Dedicated network connections from on-premises to AWS.
+  - name: Amazon VPC
+    description: Connect VPCs across regions into the global WAN.
+  - name: AWS IAM
+    description: Control access to Cloud WAN resources with IAM policies.

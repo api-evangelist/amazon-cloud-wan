@@ -1,0 +1,65 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Amazon Cloud WAN"
+  description: "Vocabulary for Amazon Cloud WAN APIs covering operations, schemas, and capability workflows."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: "Amazon Cloud WAN API"
+      namespace: cloudwan
+      baseUrl: https://networkmanager.us-east-1.amazonaws.com
+      status: active
+
+  resources: []
+  actions:
+    - name: list
+      httpMethod: GET
+      pattern: read
+    - name: create
+      httpMethod: POST
+      pattern: write
+    - name: get
+      httpMethod: GET
+      pattern: read
+    - name: delete
+      httpMethod: DELETE
+      pattern: destructive
+
+  authentication:
+    schemes:
+      - type: AWS Signature Version 4
+        apis: [cloudwan]
+
+capability:
+  workflows:
+    - name: "WAN Management"
+      file: capabilities/wan-management.yaml
+      toolCount: 6
+      personas: [Network Engineer]
+
+  personas:
+    - id: network-engineer
+      name: "Network Engineer"
+      workflows: ["WAN Management"]
+
+  namespaces:
+    - name: cloudwan
+      type: consumed
+      baseUri: https://networkmanager.us-east-1.amazonaws.com
+    - name: cloudwan-workflow-api
+      type: rest-exposed
+      port: 8080
+    - name: cloudwan-workflow-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: AWS_ACCESS_KEY_ID
+      workflows: ["WAN Management"]
+    - name: AWS_SECRET_ACCESS_KEY
+      workflows: ["WAN Management"]
+
+crossReference: []

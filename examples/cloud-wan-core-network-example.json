@@ -1,0 +1,8 @@
+{
+  "CoreNetworkId": "abc12345",
+  "CoreNetworkArn": "arn:aws:::example/abc12345",
+  "GlobalNetworkId": "abc12345",
+  "Description": "example-value",
+  "State": "CREATING",
+  "CreatedAt": "2025-03-15T14:30:00Z"
+}

@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cloudwan": "https://aws.amazon.com/cloud-wan/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CoreNetwork": "cloudwan:CoreNetwork",
+    "coreNetworkId": {
+      "@id": "cloudwan:core_network_id",
+      "@type": "xsd:string"
+    },
+    "coreNetworkArn": {
+      "@id": "cloudwan:core_network_arn",
+      "@type": "xsd:string"
+    },
+    "globalNetworkId": {
+      "@id": "cloudwan:global_network_id",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "state": {
+      "@id": "cloudwan:state",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "cloudwan:created_at",
+      "@type": "xsd:dateTime"
+    },
+    "ListCoreNetworksResponse": "cloudwan:ListCoreNetworksResponse",
+    "coreNetworks": {
+      "@id": "cloudwan:core_networks",
+      "@container": "@set"
+    },
+    "nextToken": {
+      "@id": "cloudwan:next_token",
+      "@type": "xsd:string"
+    },
+    "CreateCoreNetworkRequest": "cloudwan:CreateCoreNetworkRequest",
+    "tags": {
+      "@id": "cloudwan:tags",
+      "@container": "@set"
+    },
+    "CreateCoreNetworkResponse": "cloudwan:CreateCoreNetworkResponse",
+    "coreNetwork": {
+      "@id": "cloudwan:core_network",
+      "@type": "xsd:string"
+    },
+    "GetCoreNetworkResponse": "cloudwan:GetCoreNetworkResponse",
+    "DeleteCoreNetworkResponse": "cloudwan:DeleteCoreNetworkResponse"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/json-structure/cloud-wan-create-core-network-request-structure.json",
+  "name": "CreateCoreNetworkRequest",
+  "description": "Request body for creating a core network.",
+  "type": "object",
+  "properties": {
+    "GlobalNetworkId": {
+      "type": "string",
+      "description": "The ID of the global network that a core network will be a part of.",
+      "example": "global-network-abc12345"
+    },
+    "Description": {
+      "type": "string",
+      "description": "The description of a core network."
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Key-value tags for the core network."
+    }
+  }
+}

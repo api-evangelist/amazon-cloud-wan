@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/json-schema/cloud-wan-delete-core-network-response-schema.json",
+  "title": "DeleteCoreNetworkResponse",
+  "description": "Response for deleting a core network.",
+  "type": "object",
+  "properties": {
+    "CoreNetwork": {
+      "$ref": "#/components/schemas/CoreNetwork"
+    }
+  }
+}
