@@ -1,0 +1,42 @@
+generated: '2026-06-20'
+method: derived
+format: aws-json-exception
+source: openapi/amazon-cloud-wan-openapi.yml
+note: >-
+  Derived from the 4xx/5xx responses in the captured OpenAPI. Cloud WAN (Network
+  Manager) returns AWS-style JSON exceptions with a Message field, not
+  RFC 9457 application/problem+json. Titles/remediation enriched from the AWS
+  Network Manager API Reference Common Errors page.
+problems:
+  - status: 400
+    name: ValidationException
+    title: The input fails to satisfy the constraints specified by the service.
+    schema: "#/components/schemas/ValidationException"
+    remediation: >-
+      Check request parameters (e.g. GlobalNetworkId, coreNetworkId) against the
+      API reference and resubmit.
+    source_operations:
+      - openapi/amazon-cloud-wan-openapi.yml#ListCoreNetworks
+      - openapi/amazon-cloud-wan-openapi.yml#CreateCoreNetwork
+      - openapi/amazon-cloud-wan-openapi.yml#GetCoreNetwork
+      - openapi/amazon-cloud-wan-openapi.yml#DeleteCoreNetwork
+  - status: 404
+    name: ResourceNotFoundException
+    title: The specified resource could not be found.
+    schema: "#/components/schemas/ResourceNotFoundException"
+    remediation: >-
+      Verify the coreNetworkId exists and is owned by or shared with the calling
+      account.
+    source_operations:
+      - openapi/amazon-cloud-wan-openapi.yml#GetCoreNetwork
+      - openapi/amazon-cloud-wan-openapi.yml#DeleteCoreNetwork
+  - status: 500
+    name: InternalServerException
+    title: The request has failed due to an internal error.
+    schema: "#/components/schemas/InternalServerException"
+    remediation: Retry with exponential backoff; if persistent, contact AWS Support.
+    source_operations:
+      - openapi/amazon-cloud-wan-openapi.yml#ListCoreNetworks
+      - openapi/amazon-cloud-wan-openapi.yml#CreateCoreNetwork
+      - openapi/amazon-cloud-wan-openapi.yml#GetCoreNetwork
+      - openapi/amazon-cloud-wan-openapi.yml#DeleteCoreNetwork

@@ -14,7 +14,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
 - name: Amazon Cloud WAN API
@@ -39,6 +39,16 @@ apis:
     url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
   - type: CLI
     url: https://docs.aws.amazon.com/cli/latest/reference/networkmanager/
+  - type: Overlay
+    url: overlays/amazon-cloud-wan-openapi-overlay.yaml
+  - type: MCPServer
+    url: mcp/amazon-cloud-wan-mcp.yml
+  - type: ErrorCatalog
+    url: errors/amazon-cloud-wan-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-cloud-wan-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-cloud-wan-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -79,6 +89,14 @@ common:
   url: vocabulary/amazon-cloud-wan-vocabulary.yaml
 - type: NaftikoCapability
   url: capabilities/wan-management.yaml
+- type: Packages
+  url: packages/amazon-cloud-wan-packages.yml
+- type: WellKnown
+  url: well-known/amazon-cloud-wan-well-known.yml
+- type: SecurityTxt
+  url: well-known/amazon-cloud-wan-security.txt
+- type: LLMsTxt
+  url: llms/amazon-cloud-wan-llms.txt
 - type: Features
   data:
   - name: Centralized WAN Management

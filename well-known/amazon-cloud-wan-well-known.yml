@@ -1,0 +1,35 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Probed the /.well-known/ discovery surface on the Cloud WAN API host and the
+  AWS corporate host. The regional API endpoint rejects unauthenticated GET
+  connections (SigV4 required), so no /.well-known/ documents are served there.
+hosts:
+  - host: https://networkmanager.us-east-1.amazonaws.com
+    note: >-
+      Regional Network Manager / Cloud WAN endpoint. Connection could not be
+      established for unsigned requests; no /.well-known/ documents available.
+    documents:
+      - path: /.well-known/security.txt
+        status: null
+      - path: /.well-known/openid-configuration
+        status: null
+      - path: /.well-known/oauth-authorization-server
+        status: null
+      - path: /.well-known/api-catalog
+        status: null
+      - path: /.well-known/ai-plugin.json
+        status: null
+  - host: https://aws.amazon.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: amazon-cloud-wan-security.txt
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404

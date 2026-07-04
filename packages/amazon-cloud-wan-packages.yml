@@ -1,0 +1,67 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS SDK client libraries for the Network Manager service (which serves the
+  Amazon Cloud WAN / core-network API), verified live on each registry.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-networkmanager"
+    url: https://www.npmjs.com/package/@aws-sdk/client-networkmanager
+    install: npm install @aws-sdk/client-networkmanager
+    official: true
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    note: >-
+      Cloud WAN is accessed via the boto3 'networkmanager' client; AWS does not
+      publish a per-service Python package.
+    official: true
+  - language: java
+    registry: maven
+    name: software.amazon.awssdk:networkmanager
+    url: https://repo1.maven.org/maven2/software/amazon/awssdk/networkmanager/
+    install: "implementation 'software.amazon.awssdk:networkmanager'"
+    official: true
+  - language: dotnet
+    registry: nuget
+    name: AWSSDK.NetworkManager
+    url: https://www.nuget.org/packages/AWSSDK.NetworkManager
+    install: dotnet add package AWSSDK.NetworkManager
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/networkmanager
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/networkmanager
+    install: go get github.com/aws/aws-sdk-go-v2/service/networkmanager
+    official: true
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-networkmanager
+    url: https://rubygems.org/gems/aws-sdk-networkmanager
+    install: gem install aws-sdk-networkmanager
+    official: true
+  - language: rust
+    registry: crates.io
+    name: aws-sdk-networkmanager
+    url: https://crates.io/crates/aws-sdk-networkmanager
+    install: cargo add aws-sdk-networkmanager
+    official: true
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    note: >-
+      Monolithic AWS SDK for PHP; the NetworkManager client is included, no
+      per-service package is published.
+    official: true
+  - language: cli
+    registry: pypi
+    name: awscli
+    url: https://pypi.org/project/awscli/
+    install: pip install awscli
+    note: "aws networkmanager <command> covers the Cloud WAN core-network API."
+    official: true

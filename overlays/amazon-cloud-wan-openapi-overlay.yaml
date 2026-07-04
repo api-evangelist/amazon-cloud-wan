@@ -1,0 +1,44 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon Cloud WAN API
+  version: 1.0.0
+extends: openapi/amazon-cloud-wan-openapi.yml
+x-provenance:
+  generated: '2026-06-20'
+  method: generated
+  source: openapi/amazon-cloud-wan-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-slug: amazon-cloud-wan
+      x-apievangelist-provider: Amazon Web Services
+      x-api-lifecycle: production
+  - target: $.info
+    update:
+      x-artifacts:
+        packages: packages/amazon-cloud-wan-packages.yml
+        llms: llms/amazon-cloud-wan-llms.txt
+        conformance: conformance/amazon-cloud-wan-conformance.yml
+        errors: errors/amazon-cloud-wan-problem-types.yml
+        lifecycle: lifecycle/amazon-cloud-wan-lifecycle.yml
+  - target: $.tags
+    update:
+      - name: Core Networks
+        description: Operations for managing Cloud WAN core networks
+        x-display-name: Core Networks
+  - target: "$.paths['/core-networks'].get"
+    update:
+      x-sdk-method: listCoreNetworks
+      x-idempotent: true
+  - target: "$.paths['/core-networks'].post"
+    update:
+      x-sdk-method: createCoreNetwork
+      x-idempotent: false
+  - target: "$.paths['/core-networks/{coreNetworkId}'].get"
+    update:
+      x-sdk-method: getCoreNetwork
+      x-idempotent: true
+  - target: "$.paths['/core-networks/{coreNetworkId}'].delete"
+    update:
+      x-sdk-method: deleteCoreNetwork
+      x-idempotent: true

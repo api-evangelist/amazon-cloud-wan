@@ -1,0 +1,26 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS Network Manager / Cloud WAN documentation, AWS API versioning conventions,
+  and openapi/amazon-cloud-wan-openapi.yml.
+versioning:
+  scheme: api-version-date
+  current: '2021-12-12'
+  docs: https://docs.aws.amazon.com/networkmanager/latest/APIReference/Welcome.html
+  note: >-
+    AWS services pin an API version by date (X-Amz-Target / service model
+    version 2021-12-12) rather than a URI path segment; regional endpoints are
+    selected via the {region} host variable.
+deprecation:
+  policy_url: https://docs.aws.amazon.com/general/latest/gr/aws-sdk-lifecycle.html
+  sunset_header: false
+  deprecation_header: false
+sla:
+  url: https://aws.amazon.com/agreement/
+  uptime_target: null
+  note: >-
+    Cloud WAN has no standalone published SLA; coverage falls under the AWS
+    Customer Agreement and related networking service commitments.
+status_page: https://health.aws.amazon.com/health/status
+support_policy: https://docs.aws.amazon.com/general/latest/gr/aws-sdk-lifecycle.html
+deprecated_operations: []
