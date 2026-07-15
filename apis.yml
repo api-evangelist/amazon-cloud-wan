@@ -53,6 +53,8 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-cloud-wan-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-cloud-wan-trust-center.yml
 - type: VulnerabilityDisclosure
