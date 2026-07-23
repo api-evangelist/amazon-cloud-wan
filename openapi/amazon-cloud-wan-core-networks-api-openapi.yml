@@ -1,33 +1,25 @@
 openapi: 3.1.0
 info:
-  title: Amazon Cloud WAN API
-  description: >-
-    Amazon Cloud WAN is a managed wide area networking service that simplifies building,
-    managing, and monitoring global WANs. Connect branch offices, data centers, and
-    Amazon VPCs through a central dashboard with network policy automation.
+  title: Amazon Cloud WAN Core Networks API
+  description: Amazon Cloud WAN is a managed wide area networking service that simplifies building, managing, and monitoring global WANs. Connect branch offices, data centers, and Amazon VPCs through a central dashboard with network policy automation.
   version: '2021-12-12'
   contact:
     name: Amazon Web Services
     url: https://aws.amazon.com/contact-us/
   termsOfService: https://aws.amazon.com/service-terms/
   x-generated-from: documentation
-externalDocs:
-  description: Amazon Cloud WAN API Reference
-  url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
 servers:
-  - url: https://networkmanager.{region}.amazonaws.com
-    description: Amazon Cloud WAN Regional Endpoint
-    variables:
-      region:
-        default: us-east-1
-        description: AWS Region
+- url: https://networkmanager.{region}.amazonaws.com
+  description: Amazon Cloud WAN Regional Endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS Region
+security:
+- aws_signature: []
 tags:
-  - name: Core Networks
-    description: Operations for managing Cloud WAN core networks
-  - name: Network Policies
-    description: Operations for managing network policies
-  - name: Attachments
-    description: Operations for managing network attachments
+- name: Core Networks
+  description: Operations for managing Cloud WAN core networks
 paths:
   /core-networks:
     get:
@@ -35,20 +27,20 @@ paths:
       summary: Amazon Cloud WAN List Core Networks
       description: Returns a list of owned and shared core networks.
       tags:
-        - Core Networks
+      - Core Networks
       parameters:
-        - name: maxResults
-          in: query
-          description: The maximum number of results to return.
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 500
-        - name: nextToken
-          in: query
-          description: The token for the next page of results.
-          schema:
-            type: string
+      - name: maxResults
+        in: query
+        description: The maximum number of results to return.
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 500
+      - name: nextToken
+        in: query
+        description: The token for the next page of results.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -62,10 +54,10 @@ paths:
                   x-microcks-default: true
                   value:
                     CoreNetworks:
-                      - CoreNetworkId: "core-network-abc12345"
-                        CoreNetworkArn: "arn:aws:networkmanager::123456789012:core-network/core-network-abc12345"
-                        GlobalNetworkId: "global-network-abc12345"
-                        State: "AVAILABLE"
+                    - CoreNetworkId: core-network-abc12345
+                      CoreNetworkArn: arn:aws:networkmanager::123456789012:core-network/core-network-abc12345
+                      GlobalNetworkId: global-network-abc12345
+                      State: AVAILABLE
         '400':
           description: Bad request
           content:
@@ -86,7 +78,7 @@ paths:
       summary: Amazon Cloud WAN Create a Core Network
       description: Creates a core network as part of your global network, and optionally, with a core network policy.
       tags:
-        - Core Networks
+      - Core Networks
       requestBody:
         required: true
         content:
@@ -98,8 +90,8 @@ paths:
                 summary: Default CreateCoreNetwork request
                 x-microcks-default: true
                 value:
-                  GlobalNetworkId: "global-network-abc12345"
-                  Description: "Production global network core"
+                  GlobalNetworkId: global-network-abc12345
+                  Description: Production global network core
       responses:
         '200':
           description: Core network created
@@ -113,9 +105,9 @@ paths:
                   x-microcks-default: true
                   value:
                     CoreNetwork:
-                      CoreNetworkId: "core-network-abc12345"
-                      GlobalNetworkId: "global-network-abc12345"
-                      State: "CREATING"
+                      CoreNetworkId: core-network-abc12345
+                      GlobalNetworkId: global-network-abc12345
+                      State: CREATING
         '400':
           description: Bad request
           content:
@@ -131,21 +123,20 @@ paths:
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-
   /core-networks/{coreNetworkId}:
     get:
       operationId: GetCoreNetwork
       summary: Amazon Cloud WAN Get a Core Network
       description: Returns information about the LIVE policy for a core network.
       tags:
-        - Core Networks
+      - Core Networks
       parameters:
-        - name: coreNetworkId
-          in: path
-          required: true
-          description: The ID of a core network.
-          schema:
-            type: string
+      - name: coreNetworkId
+        in: path
+        required: true
+        description: The ID of a core network.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -159,10 +150,10 @@ paths:
                   x-microcks-default: true
                   value:
                     CoreNetwork:
-                      CoreNetworkId: "core-network-abc12345"
-                      GlobalNetworkId: "global-network-abc12345"
-                      State: "AVAILABLE"
-                      Description: "Production global network core"
+                      CoreNetworkId: core-network-abc12345
+                      GlobalNetworkId: global-network-abc12345
+                      State: AVAILABLE
+                      Description: Production global network core
         '400':
           description: Bad request
           content:
@@ -189,14 +180,14 @@ paths:
       summary: Amazon Cloud WAN Delete a Core Network
       description: Deletes a core network along with all core network policies. This can only be done if there are no attachments on a core network.
       tags:
-        - Core Networks
+      - Core Networks
       parameters:
-        - name: coreNetworkId
-          in: path
-          required: true
-          description: The network ID of the deleted core network.
-          schema:
-            type: string
+      - name: coreNetworkId
+        in: path
+        required: true
+        description: The network ID of the deleted core network.
+        schema:
+          type: string
       responses:
         '200':
           description: Core network deleted
@@ -210,8 +201,8 @@ paths:
                   x-microcks-default: true
                   value:
                     CoreNetwork:
-                      CoreNetworkId: "core-network-abc12345"
-                      State: "DELETING"
+                      CoreNetworkId: core-network-abc12345
+                      State: DELETING
         '400':
           description: Bad request
           content:
@@ -233,42 +224,76 @@ paths:
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-
 components:
   schemas:
     CoreNetwork:
       type: object
-      description: "Describes a core network."
+      description: Describes a core network.
       properties:
         CoreNetworkId:
           type: string
-          description: "The ID of a core network."
-          example: "core-network-abc12345"
+          description: The ID of a core network.
+          example: core-network-abc12345
         CoreNetworkArn:
           type: string
-          description: "The ARN of a core network."
+          description: The ARN of a core network.
         GlobalNetworkId:
           type: string
-          description: "The ID of the global network where a core network is a part of."
+          description: The ID of the global network where a core network is a part of.
         Description:
           type: string
-          description: "The description of a core network."
+          description: The description of a core network.
         State:
           type: string
           enum:
-            - CREATING
-            - UPDATING
-            - AVAILABLE
-            - DELETING
-          description: "The current state of a core network."
+          - CREATING
+          - UPDATING
+          - AVAILABLE
+          - DELETING
+          description: The current state of a core network.
         CreatedAt:
           type: string
           format: date-time
-          description: "The timestamp when a core network was created."
-
+          description: The timestamp when a core network was created.
+    CreateCoreNetworkRequest:
+      type: object
+      description: Request body for creating a core network.
+      required:
+      - GlobalNetworkId
+      properties:
+        GlobalNetworkId:
+          type: string
+          description: The ID of the global network that a core network will be a part of.
+          example: global-network-abc12345
+        Description:
+          type: string
+          description: The description of a core network.
+        Tags:
+          type: array
+          items:
+            type: object
+          description: Key-value tags for the core network.
+    InternalServerException:
+      type: object
+      description: The request has failed due to an internal error.
+      properties:
+        Message:
+          type: string
+    GetCoreNetworkResponse:
+      type: object
+      description: Response for getting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    DeleteCoreNetworkResponse:
+      type: object
+      description: Response for deleting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
     ListCoreNetworksResponse:
       type: object
-      description: "Response for listing core networks."
+      description: Response for listing core networks.
       properties:
         CoreNetworks:
           type: array
@@ -276,76 +301,32 @@ components:
             $ref: '#/components/schemas/CoreNetwork'
         NextToken:
           type: string
-
-    CreateCoreNetworkRequest:
-      type: object
-      description: "Request body for creating a core network."
-      required:
-        - GlobalNetworkId
-      properties:
-        GlobalNetworkId:
-          type: string
-          description: "The ID of the global network that a core network will be a part of."
-          example: "global-network-abc12345"
-        Description:
-          type: string
-          description: "The description of a core network."
-        Tags:
-          type: array
-          items:
-            type: object
-          description: "Key-value tags for the core network."
-
-    CreateCoreNetworkResponse:
-      type: object
-      description: "Response for creating a core network."
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-
-    GetCoreNetworkResponse:
-      type: object
-      description: "Response for getting a core network."
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-
-    DeleteCoreNetworkResponse:
-      type: object
-      description: "Response for deleting a core network."
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-
-    ValidationException:
-      type: object
-      description: "The input fails to satisfy the constraints."
-      properties:
-        Message:
-          type: string
-
     ResourceNotFoundException:
       type: object
-      description: "The specified resource could not be found."
+      description: The specified resource could not be found.
       properties:
         Message:
           type: string
         ResourceId:
           type: string
-
-    InternalServerException:
+    CreateCoreNetworkResponse:
       type: object
-      description: "The request has failed due to an internal error."
+      description: Response for creating a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    ValidationException:
+      type: object
+      description: The input fails to satisfy the constraints.
       properties:
         Message:
           type: string
-
   securitySchemes:
     aws_signature:
       type: apiKey
       in: header
       name: Authorization
       description: AWS Signature Version 4
-
-security:
-  - aws_signature: []
+externalDocs:
+  description: Amazon Cloud WAN API Reference
+  url: https://docs.aws.amazon.com/network-manager/latest/cloudwan/
