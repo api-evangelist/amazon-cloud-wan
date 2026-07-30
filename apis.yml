@@ -4,7 +4,19 @@ description: >-
   Amazon Cloud WAN is a managed wide area networking service that simplifies building, managing, and monitoring global WANs by connecting branch offices, data centers, and Amazon VPCs through a central
   dashboard with network policy automation and unified monitoring.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-cloud-wan.png
 tags:
 - AWS
 - Cloud WAN
@@ -18,7 +30,9 @@ modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
 - name: Amazon Cloud WAN API
-  description: API for building and managing global wide area networks, connecting branch offices, data centers, and VPCs with centralized control, monitoring, and network policy automation.
+  description: >-
+    API for building and managing global wide area networks, connecting branch offices, data centers,
+    and VPCs with centralized control, monitoring, and network policy automation.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/cloud-wan/
   baseURL: https://networkmanager.us-east-1.amazonaws.com
@@ -49,6 +63,16 @@ apis:
     url: conformance/amazon-cloud-wan-conformance.yml
   - type: Lifecycle
     url: lifecycle/amazon-cloud-wan-lifecycle.yml
+- aid: amazon-cloud-wan:amazon-cloud-wan-core-networks-api
+  name: Amazon Cloud WAN Core Networks API
+  description: Operations for managing Cloud WAN core networks
+  humanURL: https://aws.amazon.com/cloud-wan/
+  baseURL: https://networkmanager.us-east-1.amazonaws.com
+  tags:
+  - Core Networks
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-cloud-wan-core-networks-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
