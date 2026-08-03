@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-cloud-wan",
+  "sources": [
+    "amazon-cloud-wan-core-networks-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-cloud-wan-core-networks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
