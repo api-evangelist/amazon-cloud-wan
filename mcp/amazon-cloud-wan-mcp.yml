@@ -2,27 +2,29 @@ generated: '2026-06-20'
 method: derived
 status: candidate
 source: openapi/amazon-cloud-wan-openapi.yml
-note: >-
-  No official hosted Cloud WAN MCP server was found in AWS docs, the awslabs/mcp
-  repository, or public MCP registries as of this round. The tools below are a
-  candidate surface derived one-to-one from the captured OpenAPI operations.
+note: No official hosted Cloud WAN MCP server was found in AWS docs, the awslabs/mcp repository, or public
+  MCP registries as of this round. The tools below are a candidate surface derived one-to-one from the
+  captured OpenAPI operations.
 server:
   name: amazon-cloud-wan
   transport: stdio
 tools:
-  - name: list_core_networks
-    description: Returns a list of owned and shared core networks.
-    source_operation: openapi/amazon-cloud-wan-openapi.yml#ListCoreNetworks
-  - name: create_core_network
-    description: >-
-      Creates a core network as part of your global network, and optionally,
-      with a core network policy.
-    source_operation: openapi/amazon-cloud-wan-openapi.yml#CreateCoreNetwork
-  - name: get_core_network
-    description: Returns information about the LIVE policy for a core network.
-    source_operation: openapi/amazon-cloud-wan-openapi.yml#GetCoreNetwork
-  - name: delete_core_network
-    description: >-
-      Deletes a core network along with all core network policies (only when it
-      has no attachments).
-    source_operation: openapi/amazon-cloud-wan-openapi.yml#DeleteCoreNetwork
+- name: list_core_networks
+  description: Returns a list of owned and shared core networks.
+  source_operation: openapi/amazon-cloud-wan-openapi.yml#ListCoreNetworks
+- name: create_core_network
+  description: Creates a core network as part of your global network, and optionally, with a core network
+    policy.
+  source_operation: openapi/amazon-cloud-wan-openapi.yml#CreateCoreNetwork
+- name: get_core_network
+  description: Returns information about the LIVE policy for a core network.
+  source_operation: openapi/amazon-cloud-wan-openapi.yml#GetCoreNetwork
+- name: delete_core_network
+  description: Deletes a core network along with all core network policies (only when it has no attachments).
+  source_operation: openapi/amazon-cloud-wan-openapi.yml#DeleteCoreNetwork
+deployment:
+  mode: none
+  verified: derived
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Cloud WAN Core Networks API",
+    "version": "2021-12-12"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Core Networks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Cloud WAN List Core Networks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkmanager.{region}.amazonaws.com/core-networks",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to return."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The token for the next page of results."
+              }
+            ]
+          },
+          "docs": "Returns a list of owned and shared core networks."
+        },
+        {
+          "info": {
+            "name": "Amazon Cloud WAN Create a Core Network",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://networkmanager.{region}.amazonaws.com/core-networks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a core network as part of your global network, and optionally, with a core network policy."
+        },
+        {
+          "info": {
+            "name": "Amazon Cloud WAN Get a Core Network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkmanager.{region}.amazonaws.com/core-networks/:coreNetworkId",
+            "params": [
+              {
+                "name": "coreNetworkId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of a core network."
+              }
+            ]
+          },
+          "docs": "Returns information about the LIVE policy for a core network."
+        },
+        {
+          "info": {
+            "name": "Amazon Cloud WAN Delete a Core Network",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://networkmanager.{region}.amazonaws.com/core-networks/:coreNetworkId",
+            "params": [
+              {
+                "name": "coreNetworkId",
+                "value": "",
+                "type": "path",
+                "description": "The network ID of the deleted core network."
+              }
+            ]
+          },
+          "docs": "Deletes a core network along with all core network policies. This can only be done if there are no attachments on a core network."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
