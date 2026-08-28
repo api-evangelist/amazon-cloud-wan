@@ -5,6 +5,18 @@ description: >-
   WANs by connecting branch offices, data centers, and Amazon VPCs through a central dashboard with network policy
   automation and unified monitoring.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
