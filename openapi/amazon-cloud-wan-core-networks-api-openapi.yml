@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon Cloud WAN Core Networks API
   description: Amazon Cloud WAN is a managed wide area networking service that simplifies building, managing, and monitoring global WANs. Connect branch offices, data centers, and Amazon VPCs through a central dashboard with network policy automation.
@@ -226,6 +226,72 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    CreateCoreNetworkRequest:
+      type: object
+      description: Request body for creating a core network.
+      required:
+      - GlobalNetworkId
+      properties:
+        GlobalNetworkId:
+          type: string
+          description: The ID of the global network that a core network will be a part of.
+          example: global-network-abc12345
+        Description:
+          type: string
+          description: The description of a core network.
+        Tags:
+          type: array
+          items:
+            type: object
+          description: Key-value tags for the core network.
+    ValidationException:
+      type: object
+      description: The input fails to satisfy the constraints.
+      properties:
+        Message:
+          type: string
+    DeleteCoreNetworkResponse:
+      type: object
+      description: Response for deleting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    ResourceNotFoundException:
+      type: object
+      description: The specified resource could not be found.
+      properties:
+        Message:
+          type: string
+        ResourceId:
+          type: string
+    GetCoreNetworkResponse:
+      type: object
+      description: Response for getting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    ListCoreNetworksResponse:
+      type: object
+      description: Response for listing core networks.
+      properties:
+        CoreNetworks:
+          type: array
+          items:
+            $ref: '#/components/schemas/CoreNetwork'
+        NextToken:
+          type: string
+    InternalServerException:
+      type: object
+      description: The request has failed due to an internal error.
+      properties:
+        Message:
+          type: string
+    CreateCoreNetworkResponse:
+      type: object
+      description: Response for creating a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
     CoreNetwork:
       type: object
       description: Describes a core network.
@@ -255,72 +321,6 @@ components:
           type: string
           format: date-time
           description: The timestamp when a core network was created.
-    CreateCoreNetworkRequest:
-      type: object
-      description: Request body for creating a core network.
-      required:
-      - GlobalNetworkId
-      properties:
-        GlobalNetworkId:
-          type: string
-          description: The ID of the global network that a core network will be a part of.
-          example: global-network-abc12345
-        Description:
-          type: string
-          description: The description of a core network.
-        Tags:
-          type: array
-          items:
-            type: object
-          description: Key-value tags for the core network.
-    InternalServerException:
-      type: object
-      description: The request has failed due to an internal error.
-      properties:
-        Message:
-          type: string
-    GetCoreNetworkResponse:
-      type: object
-      description: Response for getting a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    DeleteCoreNetworkResponse:
-      type: object
-      description: Response for deleting a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    ListCoreNetworksResponse:
-      type: object
-      description: Response for listing core networks.
-      properties:
-        CoreNetworks:
-          type: array
-          items:
-            $ref: '#/components/schemas/CoreNetwork'
-        NextToken:
-          type: string
-    ResourceNotFoundException:
-      type: object
-      description: The specified resource could not be found.
-      properties:
-        Message:
-          type: string
-        ResourceId:
-          type: string
-    CreateCoreNetworkResponse:
-      type: object
-      description: Response for creating a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    ValidationException:
-      type: object
-      description: The input fails to satisfy the constraints.
-      properties:
-        Message:
-          type: string
   securitySchemes:
     aws_signature:
       type: apiKey
