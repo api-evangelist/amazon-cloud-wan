@@ -1,7 +1,7 @@
 {
   "provider": "amazon-cloud-wan",
   "sources": [
-    "amazon-cloud-wan-core-networks-api-openapi.yml"
+    "_ae-authored/amazon-cloud-wan-openapi.yml"
   ],
   "outputs": [
     "amazon-cloud-wan-core-networks-api-openapi.yml"
@@ -10,7 +10,11 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-cloud-wan-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-cloud-wan-core-networks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -226,6 +226,18 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    DeleteCoreNetworkResponse:
+      type: object
+      description: Response for deleting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    InternalServerException:
+      type: object
+      description: The request has failed due to an internal error.
+      properties:
+        Message:
+          type: string
     CreateCoreNetworkRequest:
       type: object
       description: Request body for creating a core network.
@@ -244,18 +256,28 @@ components:
           items:
             type: object
           description: Key-value tags for the core network.
+    ListCoreNetworksResponse:
+      type: object
+      description: Response for listing core networks.
+      properties:
+        CoreNetworks:
+          type: array
+          items:
+            $ref: '#/components/schemas/CoreNetwork'
+        NextToken:
+          type: string
+    CreateCoreNetworkResponse:
+      type: object
+      description: Response for creating a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
     ValidationException:
       type: object
       description: The input fails to satisfy the constraints.
       properties:
         Message:
           type: string
-    DeleteCoreNetworkResponse:
-      type: object
-      description: Response for deleting a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
     ResourceNotFoundException:
       type: object
       description: The specified resource could not be found.
@@ -267,28 +289,6 @@ components:
     GetCoreNetworkResponse:
       type: object
       description: Response for getting a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    ListCoreNetworksResponse:
-      type: object
-      description: Response for listing core networks.
-      properties:
-        CoreNetworks:
-          type: array
-          items:
-            $ref: '#/components/schemas/CoreNetwork'
-        NextToken:
-          type: string
-    InternalServerException:
-      type: object
-      description: The request has failed due to an internal error.
-      properties:
-        Message:
-          type: string
-    CreateCoreNetworkResponse:
-      type: object
-      description: Response for creating a core network.
       properties:
         CoreNetwork:
           $ref: '#/components/schemas/CoreNetwork'
