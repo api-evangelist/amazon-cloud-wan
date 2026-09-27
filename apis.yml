@@ -173,5 +173,5 @@ common:
         description: Connect VPCs across regions into the global WAN.
       - name: AWS IAM
         description: Control access to Cloud WAN resources with IAM policies.
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
