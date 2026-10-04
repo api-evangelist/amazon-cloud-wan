@@ -226,32 +226,12 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
-    InternalServerException:
-      type: object
-      description: The request has failed due to an internal error.
-      properties:
-        Message:
-          type: string
     DeleteCoreNetworkResponse:
       type: object
       description: Response for deleting a core network.
       properties:
         CoreNetwork:
           $ref: '#/components/schemas/CoreNetwork'
-    ValidationException:
-      type: object
-      description: The input fails to satisfy the constraints.
-      properties:
-        Message:
-          type: string
-    ResourceNotFoundException:
-      type: object
-      description: The specified resource could not be found.
-      properties:
-        Message:
-          type: string
-        ResourceId:
-          type: string
     CreateCoreNetworkRequest:
       type: object
       description: Request body for creating a core network.
@@ -276,12 +256,32 @@ components:
       properties:
         CoreNetwork:
           $ref: '#/components/schemas/CoreNetwork'
+    ValidationException:
+      type: object
+      description: The input fails to satisfy the constraints.
+      properties:
+        Message:
+          type: string
+    InternalServerException:
+      type: object
+      description: The request has failed due to an internal error.
+      properties:
+        Message:
+          type: string
     CreateCoreNetworkResponse:
       type: object
       description: Response for creating a core network.
       properties:
         CoreNetwork:
           $ref: '#/components/schemas/CoreNetwork'
+    ResourceNotFoundException:
+      type: object
+      description: The specified resource could not be found.
+      properties:
+        Message:
+          type: string
+        ResourceId:
+          type: string
     ListCoreNetworksResponse:
       type: object
       description: Response for listing core networks.
