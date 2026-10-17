@@ -226,12 +226,14 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
-    DeleteCoreNetworkResponse:
+    ResourceNotFoundException:
       type: object
-      description: Response for deleting a core network.
+      description: The specified resource could not be found.
       properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
+        Message:
+          type: string
+        ResourceId:
+          type: string
     CreateCoreNetworkRequest:
       type: object
       description: Request body for creating a core network.
@@ -250,47 +252,17 @@ components:
           items:
             type: object
           description: Key-value tags for the core network.
-    GetCoreNetworkResponse:
-      type: object
-      description: Response for getting a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    ValidationException:
-      type: object
-      description: The input fails to satisfy the constraints.
-      properties:
-        Message:
-          type: string
     InternalServerException:
       type: object
       description: The request has failed due to an internal error.
       properties:
         Message:
           type: string
-    CreateCoreNetworkResponse:
+    ValidationException:
       type: object
-      description: Response for creating a core network.
-      properties:
-        CoreNetwork:
-          $ref: '#/components/schemas/CoreNetwork'
-    ResourceNotFoundException:
-      type: object
-      description: The specified resource could not be found.
+      description: The input fails to satisfy the constraints.
       properties:
         Message:
-          type: string
-        ResourceId:
-          type: string
-    ListCoreNetworksResponse:
-      type: object
-      description: Response for listing core networks.
-      properties:
-        CoreNetworks:
-          type: array
-          items:
-            $ref: '#/components/schemas/CoreNetwork'
-        NextToken:
           type: string
     CoreNetwork:
       type: object
@@ -321,6 +293,34 @@ components:
           type: string
           format: date-time
           description: The timestamp when a core network was created.
+    ListCoreNetworksResponse:
+      type: object
+      description: Response for listing core networks.
+      properties:
+        CoreNetworks:
+          type: array
+          items:
+            $ref: '#/components/schemas/CoreNetwork'
+        NextToken:
+          type: string
+    CreateCoreNetworkResponse:
+      type: object
+      description: Response for creating a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    DeleteCoreNetworkResponse:
+      type: object
+      description: Response for deleting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
+    GetCoreNetworkResponse:
+      type: object
+      description: Response for getting a core network.
+      properties:
+        CoreNetwork:
+          $ref: '#/components/schemas/CoreNetwork'
   securitySchemes:
     aws_signature:
       type: apiKey
