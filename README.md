@@ -1,4 +1,4 @@
-# Amazon Cloud WAN (amazon-cloud-wan)
+# Amazon Cloud WAN
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,103 +66,188 @@
 
 Amazon Cloud WAN is a managed wide area networking service that simplifies building, managing, and monitoring global WANs by connecting branch offices, data centers, and Amazon VPCs through a central dashboard with network policy automation and unified monitoring.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-cloud-wan/refs/heads/main/apis.yml)
+**Areas:** AWS · Cloud WAN · Networking · Wide Area Network · SD-WAN
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Cloud WAN on APIs.io
 
-## Tags:
+Everything profiled for Amazon Cloud WAN is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-cloud-wan/](https://apis.io/providers/amazon-cloud-wan/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Cloud WAN, Networking, Wide Area Network, SD-WAN
+### APIs (18)
 
-## Timestamps
+- [Amazon Cloud WAN API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-api/) — API for building and managing global wide area networks, connecting branch offices, data centers, and VPCs with centralized control, monitoring, and network…
+- [Amazon Cloud WAN Core Networks API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-core-networks-api/) — Operations for managing Cloud WAN core networks
+- [Amazon Cloud WAN Cloud Wan Connect Peer Associations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-connect-peer-associations-api/) — The Cloud Wan Connect Peer Associations API from Amazon Cloud WAN — 2 operation(s) for cloud wan connect peer associations.
+- [Amazon Cloud WAN Cloud Wan Connect Peers API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-connect-peers-api/) — The Cloud Wan Connect Peers API from Amazon Cloud WAN — 2 operation(s) for cloud wan connect peers.
+- [Amazon Cloud WAN Cloud Wan Connections API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-connections-api/) — The Cloud Wan Connections API from Amazon Cloud WAN — 2 operation(s) for cloud wan connections.
+- [Amazon Cloud WAN Cloud Wan Customer Gateway Associations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-customer-gateway-associations-api/) — The Cloud Wan Customer Gateway Associations API from Amazon Cloud WAN — 2 operation(s) for cloud wan customer gateway associations.
+- [Amazon Cloud WAN Cloud Wan Devices API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-devices-api/) — The Cloud Wan Devices API from Amazon Cloud WAN — 2 operation(s) for cloud wan devices.
+- [Amazon Cloud WAN Cloud Wan Direct Connect Gateway Attachments API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-direct-connect-gateway-attachments-api/) — The Cloud Wan Direct Connect Gateway Attachments API from Amazon Cloud WAN — 2 operation(s) for cloud wan direct connect gateway attachments.
+- [Amazon Cloud WAN Cloud Wan Global Networks API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-global-networks-api/) — The Cloud Wan Global Networks API from Amazon Cloud WAN — 2 operation(s) for cloud wan global networks.
+- [Amazon Cloud WAN Cloud Wan Link Associations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-link-associations-api/) — The Cloud Wan Link Associations API from Amazon Cloud WAN — 1 operation(s) for cloud wan link associations.
+- [Amazon Cloud WAN Cloud Wan Links API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-links-api/) — The Cloud Wan Links API from Amazon Cloud WAN — 2 operation(s) for cloud wan links.
+- [Amazon Cloud WAN Cloud Wan Operations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-operations-api/) — The Cloud Wan Operations API from Amazon Cloud WAN — 38 operation(s) for cloud wan operations.
+- [Amazon Cloud WAN Cloud Wan Resource Policy API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-resource-policy-api/) — The Cloud Wan Resource Policy API from Amazon Cloud WAN — 1 operation(s) for cloud wan resource policy.
+- [Amazon Cloud WAN Cloud Wan Sites API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-sites-api/) — The Cloud Wan Sites API from Amazon Cloud WAN — 2 operation(s) for cloud wan sites.
+- [Amazon Cloud WAN Cloud Wan Tags API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-tags-api/) — The Cloud Wan Tags API from Amazon Cloud WAN — 1 operation(s) for cloud wan tags.
+- [Amazon Cloud WAN Cloud Wan Transit Gateway Connect Peer Associations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-transit-gateway-connect-peer-associations-api/) — The Cloud Wan Transit Gateway Connect Peer Associations API from Amazon Cloud WAN — 2 operation(s) for cloud wan transit gateway connect peer associations.
+- [Amazon Cloud WAN Cloud Wan Transit Gateway Registrations API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-transit-gateway-registrations-api/) — The Cloud Wan Transit Gateway Registrations API from Amazon Cloud WAN — 2 operation(s) for cloud wan transit gateway registrations.
+- [Amazon Cloud WAN Cloud Wan Vpc Attachments API](https://apis.io/apis/amazon-cloud-wan/amazon-cloud-wan-vpc-attachments-api/) — The Cloud Wan Vpc Attachments API from Amazon Cloud WAN — 2 operation(s) for cloud wan vpc attachments.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon Cloud WAN API
-API for building and managing global wide area networks, connecting branch offices, data centers, and VPCs with centralized control, monitoring, and network policy automation.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/cloud-wan/](https://aws.amazon.com/cloud-wan/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [amazon-cloud-wan](https://apis.io/servers/amazon-cloud-wan/amazon-cloud-wan/)
 
- - AWS, Cloud WAN, Networking
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/network-manager/latest/cloudwan/)
+- [Amazon Cloud Wan Agentic Access](https://apis.io/agentic-access/amazon-cloud-wan/amazon-cloud-wan-agentic-access/)
 
-- [APIReference](https://docs.aws.amazon.com/network-manager/latest/cloudwan/)
+#### JSON Schema (6)
 
-## Common Properties
+The data models the API reads and writes.
 
-- [Portal](https://aws.amazon.com/)
+- [CoreNetwork](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-core-network/)
+- [CreateCoreNetworkRequest](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-create-core-network-request/)
+- [CreateCoreNetworkResponse](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-create-core-network-response/)
+- [DeleteCoreNetworkResponse](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-delete-core-network-response/)
+- [GetCoreNetworkResponse](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-get-core-network-response/)
+- [ListCoreNetworksResponse](https://apis.io/schemas/amazon-cloud-wan/cloud-wan-list-core-networks-response/)
+
+#### JSON Structure (6)
+
+Data models expressed in JSON Structure.
+
+- [Cloud Wan Core Network Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-core-network-structure/)
+- [Cloud Wan Create Core Network Request Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-create-core-network-request-structure/)
+- [Cloud Wan Create Core Network Response Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-create-core-network-response-structure/)
+- [Cloud Wan Delete Core Network Response Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-delete-core-network-response-structure/)
+- [Cloud Wan Get Core Network Response Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-get-core-network-response-structure/)
+- [Cloud Wan List Core Networks Response Structure](https://apis.io/json-structure/amazon-cloud-wan/cloud-wan-list-core-networks-response-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Cloud Wan Context](https://apis.io/jsonld/amazon-cloud-wan/amazon-cloud-wan-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Cloud Wan Vocabulary](https://apis.io/vocabularies/amazon-cloud-wan/amazon-cloud-wan-vocabulary/)
+
+#### Examples (6)
+
+Example requests and responses.
+
+- [Cloud Wan Core Network Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-core-network-example/)
+- [Cloud Wan Create Core Network Request Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-create-core-network-request-example/)
+- [Cloud Wan Create Core Network Response Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-create-core-network-response-example/)
+- [Cloud Wan Delete Core Network Response Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-delete-core-network-response-example/)
+- [Cloud Wan Get Core Network Response Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-get-core-network-response-example/)
+- [Cloud Wan List Core Networks Response Example](https://apis.io/examples/amazon-cloud-wan/cloud-wan-list-core-networks-response-example/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Amazon Cloud WAN Core Networks API](https://apis.io/collections/amazon-cloud-wan/open-amazon-cloud-wan-core-networks-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Cloud Wan Openapi Overlay](https://apis.io/overlays/amazon-cloud-wan/amazon-cloud-wan-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Cloud WAN — jsonschema rules](https://apis.io/rules/amazon-cloud-wan/amazon-cloud-wan-jsonschema-spectral-rules/)
+- [Amazon Cloud WAN API Rules](https://apis.io/rules/amazon-cloud-wan/amazon-cloud-wan-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Cloud Wan Authentication](https://apis.io/security/amazon-cloud-wan/amazon-cloud-wan-authentication/)
+- [Amazon Cloud Wan Domain Security](https://apis.io/security/amazon-cloud-wan/amazon-cloud-wan-domain-security/)
+- [Amazon Cloud Wan Trust Center](https://apis.io/security/amazon-cloud-wan/amazon-cloud-wan-trust-center/)
+- [Amazon Cloud Wan Vulnerability Disclosure](https://apis.io/security/amazon-cloud-wan/amazon-cloud-wan-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/cloud-wan/)
-- [SpectralRules](rules/amazon-cloud-wan-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-cloud-wan-vocabulary.yaml)
-- [NaftikoCapability](capabilities/wan-management.yaml)
+- [Documentation](https://docs.aws.amazon.com/network-manager/latest/cloudwan/)
+- [Sign up](https://signin.aws.amazon.com/signup?request_type=register)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/)
+- [Compliance](https://aws.amazon.com/compliance/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Centralized WAN Management | Build and manage global wide area networks through a single centralized dashboard. |
-| Network Policy Automation | Automate management and security tasks across your entire WAN infrastructure. |
-| Unified Monitoring | Monitor on-premises and AWS network health and performance from one view. |
-| Network Segmentation | Isolate sensitive traffic from standard data flows with segmentation policies. |
-| Global Connectivity | Connect branch offices, data centers, and VPCs with minimal configuration globally. |
+**Kin Score 45.8** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 20.9 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 60.7 |
+| Access clarity | 60.5 |
 
-| Name | Description |
-|------|-------------|
-| Global Enterprise WAN | Build globally distributed corporate WANs using AWS infrastructure. |
-| Hybrid Network Extension | Extend on-premises corporate WANs into AWS cloud environments seamlessly. |
-| Network Centralization | Centralize network configuration, monitoring, and automation across all locations. |
+**Agent readiness 29.6** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS Transit Gateway | Connect VPCs and on-premises networks through Transit Gateway attachments. |
-| AWS Direct Connect | Dedicated network connections from on-premises to AWS. |
-| Amazon VPC | Connect VPCs across regions into the global WAN. |
-| AWS IAM | Control access to Cloud WAN resources with IAM policies. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-cloud-wan/](https://apis.io/providers/amazon-cloud-wan/).
 
-### JSON Schema
+## How this profile is made
 
-- No schemas generated
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### JSON-LD
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Cloud WAN: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [Amazon Cloud WAN Context](json-ld/amazon-cloud-wan-context.jsonld)
+## Open an issue
 
-## Capabilities
-
-### Shared Per-API Definitions
-
-- [Amazon Cloud WAN](capabilities/shared/cloud-wan.yaml) — 6 operations
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [WAN Management](capabilities/wan-management.yaml) | Amazon Cloud WAN | 6 | Network Engineer |
-
-## Vocabulary
-
-- [Amazon Cloud WAN Vocabulary](vocabulary/amazon-cloud-wan-vocabulary.yaml) — Unified taxonomy covering operations, workflows, and personas
-
-## Rules
-
-- [Amazon Cloud WAN Spectral Rules](rules/amazon-cloud-wan-spectral-rules.yml) — 19 rules enforcing Amazon Cloud WAN API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-cloud-wan/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
